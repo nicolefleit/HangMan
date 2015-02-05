@@ -40,6 +40,7 @@ namespace HangMan
             Console.Clear();
 
             ComputerChoice();
+            PlayGame();
 
         }
         static void IntroHangman()
@@ -92,6 +93,9 @@ namespace HangMan
             cpuWord = guessWords[index].ToUpper();
             Printing("Good Luck...");
             System.Threading.Thread.Sleep(1000);
+            //empty space in console
+            Console.WriteLine();
+            Console.WriteLine();
 
             var maskedList = new List<string>();
             for (var i = 0; i < cpuWord.Length; i++)
